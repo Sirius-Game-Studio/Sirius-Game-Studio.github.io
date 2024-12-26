@@ -1,0 +1,25 @@
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Sirius Game Studio</strong> by <a href="https://github.com/sirius-game-studio">Sirius Game Studio</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+        <p>
+            <a class="icon" href="https://github.com/sirius-game-studio">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="icon" href="https://twitter.com/sirius-game-studio">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </p>
+        <p>
+            <button id="back-to-top" class="button is-link">Back to Top</button>
+        </p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('back-to-top').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>

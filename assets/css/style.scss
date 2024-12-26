@@ -1,0 +1,30 @@
+---
+---
+@import "main.scss";
+
+#home
+{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+    &::before
+    {
+        background-image: url("/assets/images/hero-image.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        opacity: 0.25;
+        content: "";
+    }
+
+    hr
+    {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
