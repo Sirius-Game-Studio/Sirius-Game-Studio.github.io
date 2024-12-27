@@ -1,0 +1,60 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include navbar.html %}
+
+        <section id="news-page" class="section">
+            <div class="container">
+                <!-- Heading -->
+                <div class="hero mt-5 is-small is-light">
+                    <div class="hero-body">
+                        <div class="container has-text-centered">
+                            <h1 class="title is-size-2">
+                                Latest News
+                            </h1>
+                            <p class="subtitle is-size-5 has-text-grey">
+                                Stay up-to-date with the latest news and updates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Post Cards -->
+                <div class="columns is-multiline">
+                    {% for post in site.posts %}
+                        <div class="column is-one-third">
+                            <div class="card">
+                                <a href="{{ post.url }}">
+                                    <div class="card-content">
+                                        <!-- Thumbnail -->
+                                        <figure class="image is-16by9">
+                                            <img src="{{ post.thumbnail }}" alt="Thumbnail of {{ post.title }}">
+                                        </figure>
+
+                                        <!-- Title -->
+                                        <h2 class="title mt-4 is-size-5">
+                                            {{ post.title }}
+                                        </h2>
+
+                                        <!-- Publish Date -->
+                                        <p class="subtitle is-size-6 has-text-grey">
+                                            {{ post.date | date: "%B %d, %Y" }}
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>

@@ -1,0 +1,69 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include navbar.html %}
+
+        <section id="game" class="hero is-fullheight">
+            <div class="hero-body is-align-items-start mt-6">
+                <div class="container">
+                    <!-- Heading -->
+                    <h1 class="title is-size-2 has-text-centered">
+                        {{ page.title }}
+                    </h1>
+                    <p class="subtitle is-size-5 has-text-centered">
+                        {{ page.short-description }}
+                    </p>
+                    <hr>
+
+                    <div class="columns">
+                        <!-- Game Details -->
+                        <div class="column is-half">
+                            {{ content }}
+
+                            <!-- Download Buttons -->
+                            <ul class="mt-4">
+                                {% unless page.itch-io-link == "" or page.itch-io-link == nil %}
+                                    <li>
+                                        <a href="{{ page.itch-io-link }}" target="_blank">
+                                            <img src="/assets/images/games/download-itch-io.svg" alt="Available on itch.io" class="download-badge">
+                                        </a>
+                                    </li>
+                                {% endunless %}
+                                {% unless page.google-play-link == "" or page.google-play-link == nil %}
+                                    <li>
+                                        <a href="{{ page.google-play-link }}" target="_blank">
+                                            <img src="/assets/images/games/download-google-play.png" alt="Get it on Google Play" class="download-badge">
+                                        </a>
+                                    </li>
+                                {% endunless %}
+                                {% unless page.app-store-link == "" or page.app-store-link == nil %}
+                                    <li>
+                                        <a href="{{ page.app-store-link }}" target="_blank">
+                                            <img src="/assets/images/games/download-app-store.svg" alt="Download on the App Store" class="download-badge">
+                                        </a>
+                                    </li>
+                                {% endunless %}
+                            </ul>
+                        </div>
+
+                        <!-- Game Images -->
+                        <div class="column is-half">
+                            <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000 }'>
+                                {% for image in page.images %}
+                                    <img src="{{ image }}" alt="Screenshot of {{ page.title }}">
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>

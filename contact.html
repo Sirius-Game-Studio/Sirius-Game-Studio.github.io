@@ -1,0 +1,108 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include navbar.html %}
+
+        <!-- Hero Section -->
+        <section id="contact-page-hero" class="hero is-fullheight has-text-centered">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-size-1 has-text-white">
+                        Get in Touch with Us!
+                    </h1>
+                    <p class="subtitle is-size-4 has-text-white">
+                        We’d love to hear from you! Whether it’s feedback, collaboration ideas, or just a friendly hello.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-page" class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <!-- Contact Form -->
+                    <div class="column is-half">
+                        <div class="box">
+                            <form method="POST" action="https://formspree.io/f/xeoojbzo">
+                                <div class="columns">
+                                    <div class="column is-half">
+                                        <div class="field">
+                                            <label class="label">
+                                                Name*
+                                            </label>
+                                            <div class="control">
+                                                <input class="input" type="text" name="name" placeholder="Your Name" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column is-half">
+                                        <div class="field">
+                                            <label class="label">
+                                                Email*
+                                            </label>
+                                            <div class="control">
+                                                <input class="input" type="email" name="email" placeholder="Your Email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">
+                                        Subject*
+                                    </label>
+                                    <div class="control">
+                                        <input class="input" type="text" name="subject" placeholder="Subject" required>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">
+                                        Message*
+                                    </label>
+                                    <div class="control">
+                                        <textarea class="textarea" name="message" placeholder="Your Message" rows="5" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="field control">
+                                    <button class="button is-fullwidth is-primary" type="submit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Direct Contact Info -->
+                    <div class="column is-half">
+                        <!-- Heading -->
+                        <h2 class="title is-size-2">
+                            Contact Us
+                        </h2>
+                        <p class="subtitle is-size-5">
+                            Please fill out the form and let us know about your concerns. Alternatively, you
+                            can reach out to us directly. We will get back to you as soon as possible.
+                        </p>
+
+                        <div class="content is-size-6">
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:mythology06@gmail.com">mythology06@gmail.com</a>
+                            </p>
+                            <p>
+                                <strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send?phone=8801334182900">+880 1334-182900</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>

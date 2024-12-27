@@ -2,6 +2,7 @@
 ---
 @import "main.scss";
 
+// Sections
 #home
 {
     background: linear-gradient(0deg, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.5) 100%);
@@ -9,22 +10,156 @@
     &::before
     {
         background-image: url("/assets/images/hero-image.jpg");
-        background-position: center;
         background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
-        background-attachment: fixed;
+        position: absolute;
         top: 0px;
         right: 0px;
         bottom: 0px;
         left: 0px;
-        position: absolute;
         opacity: 0.25;
         content: "";
     }
 
     hr
     {
+        margin: 0px auto;
         width: 50%;
-        margin: 0 auto;
+    }
+}
+
+#games
+{
+    .card
+    {
+        transition: all 0.3s ease;
+        border-radius: 16px;
+        background-color: rgba(230, 230, 230, 1.0);
+
+        &:hover
+        {
+            background-color: rgba(204, 204, 204, 1.0);
+        }
+
+        img
+        {
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+    }
+}
+
+#news
+{
+    .card
+    {
+        transition: all 0.3s ease;
+        transform: scale(1.0);
+        border-radius: 24px;
+        background-color: #F2F0EF;
+
+        &:hover
+        {
+            transform: scale(1.025);
+        }
+
+        img
+        {
+            object-fit: cover;
+        }
+    }
+}
+
+#about
+{
+    .box
+    {
+        background-color: #F2F0EF;
+    }
+}
+
+// Layouts
+#game
+{
+    .carousel
+    {
+        img
+        {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    .download-badge
+    {
+        margin-top: 10px;
+        width: 200px;
+        height: auto;
+    }
+}
+
+#post
+{
+    .container
+    {
+        width: 50%;
+
+        @media screen and (max-width: 768px)
+        {
+            width: 75%;
+        }
+    }
+}
+
+// Pages
+#news-page
+{
+    .card
+    {
+        transition: all 0.3s ease;
+        transform: scale(1.0);
+        border-radius: 24px;
+        background-color: #F2F0EF;
+
+        &:hover
+        {
+            transform: scale(1.025);
+        }
+
+        img
+        {
+            object-fit: cover;
+        }
+    }
+}
+
+#contact-page-hero
+{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+    &::before
+    {
+        background-image: url("/assets/images/contact-hero-image.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.25;
+        content: "";
+    }
+}
+
+#contact-page
+{
+    .box
+    {
+        border-radius: 16px;
+        background-color: #F2F0EF;
     }
 }

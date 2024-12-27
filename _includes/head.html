@@ -1,6 +1,8 @@
 <head>
     {% include meta.html %}
-    <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
-    <link rel="shortcut icon" href="{{site.favicon-url}}" type="image/x-icon">
+    <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% else %} - {{ site.tagline }}{% endif %}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="{{ site.favicon-url }}" type="image/x-icon">
 </head>
+
+<script src="/imports/flickity-2.3.0/flickity.pkgd.min.js"></script>

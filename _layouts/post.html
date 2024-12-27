@@ -1,0 +1,42 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include navbar.html %}
+
+        <!-- Hero Section -->
+        <section class="hero is-large" style="background-image: url('{{ page.hero-image }}'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <!-- Publish Date & Author -->
+                    <h2 class="subtitle is-size-4 {{ page.text-color-modifier }}">
+                        Published on {{ page.date | date: "%B %d, %Y" }} by <strong class="{{ page.text-color-modifier }}">{{ page.author }}</strong>
+                    </h2>
+
+                    <!-- Title -->
+                    <h1 class="title is-size-2 {{ page.text-color-modifier }}">
+                        {{ page.title }}
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="subtitle is-size-5 {{ page.text-color-modifier }}">
+                        {{ page.description }}
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section id="post" class="section">
+            <div class="container content is-centered">
+                {{ content }}
+            </div>
+        </section>
+    </body>
+
+    {% include footer.html %}
+</html>
