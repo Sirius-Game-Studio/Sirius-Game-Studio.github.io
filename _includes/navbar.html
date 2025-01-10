@@ -50,3 +50,16 @@
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function()
+    {
+        const navbarBurger = document.querySelector(".navbar-burger");
+        navbarBurger.addEventListener("click", function()
+        {
+            const target = document.getElementById(navbarBurger.dataset.target);
+            navbarBurger.classList.toggle("is-active");
+            target.classList.toggle("is-active");
+        })
+    })
+</script>
