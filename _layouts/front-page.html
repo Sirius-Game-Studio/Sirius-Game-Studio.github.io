@@ -45,7 +45,7 @@ layout: compress
                         <div class="column is-one-third">
                             <div class="card">
                                 <a href="{{ game.url }}">
-                                    <!-- Image -->
+                                    <!-- Thumbnail -->
                                     <figure class="image is-4by3">
                                         <img src="{{ game.thumbnail }}" alt="Thumbnail of {{ game.title }}">
                                     </figure>
@@ -156,6 +156,7 @@ layout: compress
                 </p>
                 <hr>
 
+                {% comment %}
                 <!-- Team Section -->
                 <div class="has-text-centered">
                     <h2 class="title is-size-3">
@@ -166,9 +167,9 @@ layout: compress
                         {% for member in site.data.team %}
                             <div class="column is-one-third">
                                 <div class="box">
-                                    <!-- Image -->
+                                    <!-- Avatar -->
                                     <figure class="image is-128x128 is-inline-block">
-                                        <img class="is-rounded" src="{{ member.image }}" alt="Image of {{ member.name }}">
+                                        <img class="is-rounded" src="{{ member.image }}" alt="Avatar of {{ member.name }}">
                                     </figure>
 
                                     <!-- Name -->
@@ -186,6 +187,7 @@ layout: compress
                     </div>
                 </div>
                 <hr>
+                {% endcomment %}
 
                 <!-- Contact Section -->
                 <div class="has-text-centered">
@@ -211,7 +213,7 @@ layout: compress
                 <hr>
 
                 <!-- Team Cards -->
-                <div class="columns is-multiline is-justify-content-center mt-5">
+                <div class="columns is-multiline is-justify-content-center has-text-centered mt-5">
                     {% for member in site.data.team %}
                         <div class="column is-one-third">
                             <div class="box">
