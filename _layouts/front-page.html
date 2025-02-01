@@ -73,7 +73,7 @@ layout: compress
             <div class="container">
                 <!-- Heading -->
                 <h1 class="title mt-5 is-size-2 has-text-centered">
-                    News
+                    Latest News
                 </h1>
                 <hr>
 
@@ -156,39 +156,6 @@ layout: compress
                 </p>
                 <hr>
 
-                {% comment %}
-                <!-- Team Section -->
-                <div class="has-text-centered">
-                    <h2 class="title is-size-3">
-                        Meet Our Team
-                    </h2>
-
-                    <div class="columns is-multiline is-justify-content-center mt-5">
-                        {% for member in site.data.team %}
-                            <div class="column is-one-third">
-                                <div class="box">
-                                    <!-- Avatar -->
-                                    <figure class="image is-128x128 is-inline-block">
-                                        <img class="is-rounded" src="{{ member.image }}" alt="Avatar of {{ member.name }}">
-                                    </figure>
-
-                                    <!-- Name -->
-                                    <h3 class="title mt-3 is-size-4">
-                                        {{ member.name }}
-                                    </h3>
-
-                                    <!-- Role -->
-                                    <p class="subtitle is-size-6 has-text-grey">
-                                        {{ member.role }}
-                                    </p>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                <hr>
-                {% endcomment %}
-
                 <!-- Contact Section -->
                 <div class="has-text-centered">
                     <h2 class="title is-size-3">
@@ -205,15 +172,19 @@ layout: compress
         </section>
 
         <section id="team" class="section">
-            <div class="container">
+            <div class="container has-text-centered">
                 <!-- Heading -->
-                <h1 class="title mt-5 is-size-2 has-text-centered">
+                <h1 class="title mt-5 is-size-2">
                     Our Team
                 </h1>
                 <hr>
 
                 <!-- Team Cards -->
-                <div class="columns is-multiline is-justify-content-center has-text-centered mt-5">
+                <p class="is-size-5">
+                    We have a passionate team of game developers. Meet the talented individuals who
+                    make up Sirius Game Studio.
+                </p>
+                <div class="columns is-multiline is-justify-content-center mt-5">
                     {% for member in site.data.team %}
                         <div class="column is-one-third">
                             <div class="box">
