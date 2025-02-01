@@ -16,18 +16,21 @@
     </div>
 
     <div id="navbar-menu" class="navbar-menu">
-        <div class="navbar-start has-text-weight-medium">
-            <a class="navbar-item is-uppercase" href="{% if page.layout == 'front-page' %}/#{% else %}/{% endif %}">
+        <div class="navbar-start has-text-weight-medium is-uppercase">
+            <a class="navbar-item" href="{% if page.layout == 'front-page' %}/#{% else %}/{% endif %}">
                 Home
             </a>
-            <a class="navbar-item is-uppercase" href="/#games">
+            <a class="navbar-item" href="/#games">
                 Games
             </a>
-            <a class="navbar-item is-uppercase" href="/#news">
+            <a class="navbar-item" href="/#news">
                 News
             </a>
-            <a class="navbar-item is-uppercase" href="/#about">
+            <a class="navbar-item" href="/#about">
                 About
+            </a>
+            <a class="navbar-item" href="/#team">
+                Team
             </a>
         </div>
 
